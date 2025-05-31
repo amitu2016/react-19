@@ -20,14 +20,20 @@ const Product = () => {
     }
 ]
 
-    return products.map((product) => (
+    return( 
+    <>
+        {products.map(
+        (product) => (
         <div className="card" key={product.code}> 
-        <img src={product.img} alt={product.name} width={120} height={120}/>
-        <span>{product.code}</span>
-        <span>{product.name}</span>
-        <span>${product.price}</span>
-    </div>
-    ));
+            <img src={product.img} alt={product.name} width={120} height={120}/>
+            <span>{product.code}</span>
+            <span>{product.name}</span>
+            <span>${product.price}</span>
+            </div>
+       ))}
+   </>
+        
+);
 }
 
 export default Product;
